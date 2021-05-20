@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <?import com.jfoenix.controls.JFXButton?> 
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #0E74AF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminAddAppointmentControllerFX">
+	<children>
+		<Label id="addappointmentLabel" layoutX="34.0" layoutY="33.0" text="BOOK APPOINTMENT" textFill="WHITE" textOverrun="LEADING_ELLIPSIS" underline="true" AnchorPane.leftAnchor="40.0">
+			<font>
+				<Font name="Bodoni 72 Oldstyle Book" size="18.0" />
+			</font>
+		</Label>
+		<AnchorPane layoutX="32.0" layoutY="100.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="79.0">
+			<children>
+            <ComboBox fx:id="doctor_spec" layoutY="1.0" prefHeight="34.0" prefWidth="380.0" promptText="select doctor specialization" />
+            <ComboBox fx:id="doctor_name" layoutY="40.0" prefHeight="34.0" prefWidth="380.0" promptText="select doctor name" />
+            <DatePicker fx:id="appointment_date" layoutY="78.0" prefHeight="35.0" prefWidth="380.0" promptText="select appointment date" />
+            <ComboBox fx:id="appointment_time" layoutY="118.0" prefHeight="34.0" prefWidth="380.0" promptText="select appointment time" />
+            <ComboBox fx:id="patient_id" layoutY="157.0" prefHeight="35.0" prefWidth="380.0" promptText="select patient" />
+				
+				
+  				<JFXButton fx:id="addBtn" layoutX="282.0" layoutY="197.0"  prefWidth="98.0"  onAction="#addappointment" stylesheets="@bootstrap3.css" text="ADD" />   
+
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>

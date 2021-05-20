@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="anchorPane" style="root" stylesheets="@bootstrap3.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminControllerFX">
+	<children>
+		<AnchorPane layoutX="59.0" prefHeight="57.0" prefWidth="667.0" stylesheets="@bootstrap3.css" AnchorPane.leftAnchor="60.0">
+			<children>
+				<MenuBar layoutX="195.0" layoutY="14.0" stylesheets="@bootstrap3.css" AnchorPane.topAnchor="14.0">
+					<menus>
+					    
+						<Menu fx:id="patientTab" mnemonicParsing="false" styleClass="primary"  text="Patient Details">
+							<items>
+								<MenuItem fx:id="addPatient" mnemonicParsing="false" onAction="#handleAddPatientAction" text="Add" />
+
+								<MenuItem fx:id="ViewPatient" mnemonicParsing="false"  onAction="#handleViewPatientAction" text="View" />
+							</items>
+						</Menu>
+						<Menu fx:id="appointmentTab" mnemonicParsing="false"  text="Appointment Details">
+							<items>
+								<MenuItem fx:id="addAppointment" mnemonicParsing="false" onAction="#handleAddAppointmentAction" text="Add" />
+								<MenuItem fx:id="viewAppointment" mnemonicParsing="false" onAction="#handleViewAppointmentAction" text="View" />
+
+							</items>
+						</Menu>
+					</menus>
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+					<effect>
+						<Glow />
+					</effect>
+				</MenuBar>
+			</children>
+		</AnchorPane>
+		<AnchorPane fx:id="dynamicPane" layoutX="-66.0" layoutY="68.0" prefHeight="650.0" prefWidth="741.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="68.0">
+			<children>
+
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>
